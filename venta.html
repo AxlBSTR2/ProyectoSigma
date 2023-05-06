@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vender objeto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Enlazar hoja de estilos de Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+  
+</header>
+
+<body>
+	 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple">
+        <div class="container-fluid">
+          <img src="imagenes/sigmashopLOGOtranspranet" alt="icono" width="120" height="100" class="d-inline-block align-text-top">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Inicio
+                  <span class="visually-hidden"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="CarritoCompra.HTML">Comprar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="venta.html">Venta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Registro.HTML">Login/Registro</a>
+                
+              </li>
+            </ul>
+         
+          </div>
+        </div>
+      </nav>
+	
+
+	<main class="container mt-4">
+		</Style><h1>Vender objeto</h1>
+		<hr>
+		
+		<form action="procesar_vender_objeto.php" method="POST">
+			<div class="form-group">
+				<label for="nombre">Nombre del objeto:</label>
+				<input type="text" name="nombre" id="nombre" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label for="descripcion">Descripción:</label>
+				<textarea name="descripcion" id="descripcion" class="form-control" rows="5" required></textarea>
+			</div>
+			<div class="form-group">
+				<label for="precio">Precio:</label>
+				<input type="number" name="precio" id="precio" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label for="imagen">Imagen:</label>
+				<input type="file" name="imagen" id="imagen" class="form-control-file" required>
+			</div>
+			<button type="submit" class="btn btn-primary">VENDE TU COMPONENTE!
+            </button>
+		</form>
+	</main>
+
+	
+
+	
+</body>
+</html>

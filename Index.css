@@ -1,0 +1,42 @@
+body{
+    background-image: url(imagenes/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    }
+
+    .carousel-item img {
+        max-width: 80%;
+        height: auto;
+        
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 56vh;
+      }
+      h1, label, input, textarea, button {
+        color: white;
+    }
+
+    .navbar-collapse {
+      animation-duration: 0.5s;
+      animation-name: slideIn;
+      transform-origin: top;
+    }
+    
+    @keyframes slideIn {
+      from {
+        transform: scaleY(0);
+      }
+    
+      to {
+        transform: scaleY(1);
+      }
+    }
+
+    .carousel-item {
+      transition: none;
+  }
