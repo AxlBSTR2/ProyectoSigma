@@ -5,13 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>SigmaShop Compras</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">    <link rel="stylesheet" href="CarritoCompra.CSS">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="CarritoCompra.CSS">
     <script src="CarritoCompra.JS" async></script>
+    <title>SigmaShop Compras</title>
 </head>
 
-<body>  
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <img src="imagenes/sigmashopLOGOtranspranet" href="Index.HTML" alt="Bootstrap" width="80" height="80">
+          <a class="navbar-brand" href="Index.HTML">SigmaShop</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Index.HTML">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="CarritoCompra.HTML">Comprar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Venta.HTML">Vender</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Contacto.HTML">Contactanos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Conectate a SigmaShop
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="Login.HTML">Inicia Sesion!</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="Registro.HTML">Registrate!</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Que buscas?" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
     <section class="contenedor">
         <!-- Items de compra -->
         <div class="contenedor-items">
@@ -171,7 +211,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">Intel Core Core i5-12400F</span>
+                <span class="titulo-item">Intel Core i5-12400F</span>
                 <img src="img/proces/Core i5-12400F.png" alt="" class="img-item">
                 <span class="desc-item">Frecuencia: 2500/4400(max) MHz</span>
                 <span class="desc-item">Núcleo/Hilo: 6 núcleos/12 hilos</span>
@@ -244,7 +284,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">Ram PC G.Skill Trident Z</span>
+                <span class="titulo-item">Ram PC Trident Z</span>
                 <img src="img/ram/pc ddr4 2x8gb.png" alt="" class="img-item">
                 <span class="desc-item">Capacidad: 2x8GB</span>
                 <span class="desc-item">Tipo: DDR4</span>
@@ -290,7 +330,7 @@
             </div>
             <!-- Tarjetas Madres -->
             <div class="item">
-                <span class="titulo-item">A520M-A II Micro ATX</span>
+                <span class="titulo-item">A520M-A II Micro</span>
                 <img src="img/motherboard/Asus PRIME A520M-A II.png" alt="" class="img-item">
                 <span class="desc-item">Fabricante: ASUS</span>
                 <span class="desc-item">Socket: AM4</span>
@@ -299,7 +339,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">Z690M Phanom Gaming 4 ATX</span>
+                <span class="titulo-item">Z690M Phanom Gaming 4</span>
                 <img src="img/motherboard/AsRock Z690M Phntom Gaming 4.png" alt="" class="img-item">
                 <span class="desc-item">Fabricante: AsRock</span>
                 <span class="desc-item">Socket: LGA1700</span>
@@ -308,7 +348,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">PRO B650M-A WIFI ATX</span>
+                <span class="titulo-item">PRO B650M-A WIFI</span>
                 <img src="img/motherboard/MSI PRO B650M-A WIFI.png" alt="" class="img-item">
                 <span class="desc-item">Fabricante: MSI</span>
                 <span class="desc-item">Socket: AM5</span>
@@ -317,7 +357,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">Z690M PG Lightning ATX</span>
+                <span class="titulo-item">Z690M PG Lightning</span>
                 <img src="img/motherboard/ASRock Z790 PG Lightning.png" alt="" class="img-item">
                 <span class="desc-item">Fabricante: AsRock</span>
                 <span class="desc-item">Socket: LGA1700</span>
@@ -326,7 +366,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">PRIME H510M-E MicroATX</span>
+                <span class="titulo-item">PRIME H510M-E</span>
                 <img src="img/motherboard/ASUS PRIME H510M-E.jpg" alt="" class="img-item">
                 <span class="desc-item">Fabricante: ASUS</span>
                 <span class="desc-item">Socket: LGA1200</span>
@@ -335,7 +375,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">A320M-A PRO ATX</span>
+                <span class="titulo-item">A320M-A PRO</span>
                 <img src="img/motherboard/MSI A320M-A PRO.jpg" alt="" class="img-item">
                 <span class="desc-item">Fabricante: ASUS</span>
                 <span class="desc-item">Socket: LGA1200</span>
@@ -344,7 +384,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">H310M M.2 2.0 MicroATX</span>
+                <span class="titulo-item">H310M M.2 2.0</span>
                 <img src="img/motherboard/Gigabyte H310M M.2 2.0.png" alt="" class="img-item">
                 <span class="desc-item">Fabricante: Gigabyte</span>
                 <span class="desc-item">Socket: LGA1151</span>
@@ -353,7 +393,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">MPG B550 GAMING PLUS ATX</span>
+                <span class="titulo-item">MPG B550 GAMING PLUS</span>
                 <img src="img/motherboard/msi mpg b550 gaming plus.png" alt="" class="img-item">
                 <span class="desc-item">Fabricante: MSI</span>
                 <span class="desc-item">Socket: AM4</span>
@@ -362,7 +402,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">B660M Steel Legend</span>
+                <span class="titulo-item">B660M STEEL LEGEND</span>
                 <img src="img/motherboard/ASROCK B600M STEEL LEGEND.png" alt="" class="img-item">
                 <span class="desc-item">Fabricante: AsRock</span>
                 <span class="desc-item">Socket: LGA1700</span>
@@ -371,7 +411,7 @@
                 <button class="boton-item">Agregar al carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">Z590 AORUS ELITE AX</span>
+                <span class="titulo-item">Z590 AORUS ELITE</span>
                 <img src="img/motherboard/Gigabyte z590 AOURS ELITE AX.png" alt="" class="img-item">
                 <span class="desc-item">Fabricante: Gigabyte</span>
                 <span class="desc-item">Socket: LGA1200</span>

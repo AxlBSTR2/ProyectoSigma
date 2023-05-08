@@ -1,0 +1,6 @@
+
+.navbar-collapse {
+    animation-duration: 0.5s;
+    animation-name: slideIn;
+    transform-origin: top;
+  }
