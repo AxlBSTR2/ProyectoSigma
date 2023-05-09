@@ -1,5 +1,5 @@
-const nombre = document.getElementById('name')
-const password = document.getElementById("password")
+const nombre = document.getElementById("name")
+const pass = document.getElementById("password")
 const email = document.getElementById("email")
 const form = document.getElementById("form")
 const parrafo = document.getElementById("warnings")
@@ -8,9 +8,9 @@ form.addEventListener("submit", e=>{
     e.preventDefault()
     let warnings = ""
     let entrar = false
-    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
     parrafo.innerHTML = ""
-    if(nombre.value.length <6){
+    if(nombre.value.length <5){
         warnings += `El nombre no es valido <br>`
         entrar = true
     }
@@ -18,11 +18,11 @@ form.addEventListener("submit", e=>{
         warnings += `El email no es valido <br>`
         entrar = true
     }
-    if(password.value.length < 8){
+    if(pass.value.length < 8){
        warnings += `La contraseña no es valido <br>`
        entrar = true
     }
-    if(entrar){
+    if(entrar == true){
         parrafo.innerHTML = warnings
     }else{
         parrafo.innerHTML = "Enviado"
