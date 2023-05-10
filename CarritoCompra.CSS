@@ -18,7 +18,7 @@
 .contenedor .contenedor-items{
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 30px;
     grid-row-gap: 30px;
     width: 100%;
@@ -221,13 +221,13 @@ margin-bottom: 10px;
 }
 
 .navbar-with-image {
-    background-image: url('imagenes/fondo.jpg');
+    background-image: url('imagenes/fondo2.jpg');
     background-size: cover;
     background-position: center;
 
-  }
-  .navbar-nav .nav-link {
-    color: #fff;
+}
+.navbar-nav .nav-link {
+    color: #000000;
   }
 
 .navbar-collapse {
