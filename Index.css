@@ -126,3 +126,7 @@ body{
     background-color: #FF9595;
     border-right-color: #FF3434;
 }
+
+@media (max-width: 750px){
+
+ }

@@ -212,8 +212,7 @@ margin-bottom: 10px;
 
     }
     .contenedor-items{
-        width: 100% !important;
-
+        width: 100%;
     }
     .carrito{
         width: 100%

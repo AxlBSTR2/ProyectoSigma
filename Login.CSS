@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&family=Roboto:wght@300;400;500;700&display=swap');
+
 :root{
     --colorTextos: black;
 }
@@ -24,6 +26,7 @@ h1{
 }
 form{
     background: white;
+    margin-top: 100px;
     padding: 40px 0;
     box-shadow: 0 0 6px 0 #581f4f;
     border-radius: 10px;
@@ -43,7 +46,7 @@ input{
     background: none;
     color: #6c6c6c;
     font-size: 18px;
-    padding: 10px 10px 10px 5px;
+    padding: 10px 10px 10px 0px;
     display: block;
     width: 100%;
     border: none;
@@ -70,7 +73,7 @@ input:focus~label,
 input:valid~label{
     top: -14px;
     font-size: 12px;
-    color: #581f4f;
+    color: #7c1f6e;
 }
 
 .barra{
@@ -85,7 +88,7 @@ input:valid~label{
     width: 0%;
     bottom: 0;
     position: absolute;
-    background: #581f4f;
+    background: #633c5d;
     transition: 0.3s ease width;
     left: 0;
 }
@@ -133,12 +136,24 @@ form button:hover{
     text-align: center;
     margin: auto;
     color: #581f4f;
-    padding-top: 20px;
+    padding-top: 10px;
+}
+.g-recaptcha{
+    display: flex;
+    margin-right: 1px;
+    margin-left: 3px;
 }
 
 @media screen and (max-width: 500px){
     form{
         width: 80%;
+    }
+    .g-recaptcha{
+        position: relative;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+
     }
 }
 
