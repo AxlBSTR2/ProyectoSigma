@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
-
+body{
+    background-image: url(imagenes/fondo\ 4.jpg); 
+}
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +14,7 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    contain: paint;
+    background-color:  white !important;
 }
 
 .contenedor .contenedor-items{
@@ -218,8 +220,15 @@ margin-bottom: 10px;
         width: 100%
     }
 }
-.navbar-nav .nav-link {
-    color: #000000;
+
+.navbar-with-image {
+    background-image: url('imagenes/fondo\ 4.jpg');
+    background-size: cover;
+    background-position: center;
+
+  }
+  .navbar-nav .nav-link {
+    color:black;
   }
 
 .navbar-collapse {
@@ -227,3 +236,17 @@ margin-bottom: 10px;
     animation-name: slideIn;
     transform-origin: top;
   }
+
+.navbar {
+    background-color: transparent !important;
+    
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: lightgray !important;
+}

@@ -1,8 +1,3 @@
-
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-image: url('imagenes/fondo.jpg');
     background-size: cover;
@@ -29,7 +24,7 @@ ul {
 }
 
 .logo span {
-    color: blueviolet;
+    color: #000;
 }
 
 .contact-wrapper {
@@ -41,7 +36,7 @@ ul {
 }
 
 .contact-form {
-    background-image: url(imagenes/fondo3.jpg);
+    background-image: url(imagenes/fondo\ 4.jpg);
     background-size: cover;
     background-position: center;
     line-height: 1.6;
@@ -79,13 +74,7 @@ ul {
     border-bottom: 1px solid #d63031;
 }
 
-.contact-form form button {
-    background: blueviolet;
-    border: 0;
-    color:blueviolet;
-    text-transform: uppercase;
-    padding: 1em;
-}
+
 
 .contact-form form button:hover,
 .contact-form form button:focus {
@@ -124,7 +113,7 @@ ul {
 }
 body {
     
-    color:floralwhite;
+    color:white;
 }
 .Mas.informacion {
     color: white;
@@ -142,3 +131,17 @@ body {
     animation-name: slideIn;
     transform-origin: top;
   }
+
+.navbar {
+    background-color: transparent !important;
+    
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+color: white !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+color: lightgray !important;
+}

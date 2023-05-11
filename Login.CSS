@@ -144,6 +144,20 @@ form button:hover{
     margin-left: 3px;
 }
 
+.navbar {
+    background-color: transparent !important;
+    
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+color: white !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+color: lightgray !important;
+}
+
 @media screen and (max-width: 500px){
     form{
         width: 80%;

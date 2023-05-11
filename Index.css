@@ -1,11 +1,11 @@
+
 body{
-    background-image: url(imagenes/fondo.jpg);
+    background-image: url(imagenes/fondo\ 4.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     }
-
     .carousel-item img {
         max-width: 80%;
         height: auto;
@@ -16,9 +16,10 @@ body{
         justify-content: center;
         align-items: center;
         height: 56vh;
+      
       }
       h1, label, input, textarea, button {
-        color: white;
+        color:#fafbff;
     }
 
     .navbar-collapse {
@@ -41,92 +42,80 @@ body{
       transition: none;
   }
 
-  .botones-socieales {
-    width: auto;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    left: -33px;
+  .navbar {
+    background-color: transparent !important;
+    
 }
-.botones-socieales .contenedor-botones {
-    display: flex;
-    flex-direction: column;
-}
-.botones-socieales .contenedor-botones li {
-    display: block;
-}
-.botones-socieales .boton-social {
-    text-decoration: none;
-    color: inherit;
-    position: relative;
-    display: flex;
-}
-.botones-socieales .texto-oculto {
-    position: absolute;
-    width: auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    top: 0;
-    color: #fff;
-    text-shadow: 0 0 3px rgba(0, 0, 0, .3);
-    padding-left: calc(55px + 15px);
-    padding-right: 15px;
-    border-right: 7px solid;
-    transition: all ease-out 220ms;
-    left: 0;
-    transform: translateX(-100%);
-    white-space: nowrap;
-}
-.botones-socieales .boton-social:hover .texto-oculto {
-    transform: translateX(0);
-}
-.botones-socieales .boton-social .icono-boton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 55px;
-    height: 55px;
-    color: #fff;
-    z-index: 1;
-}
-.botones-socieales .boton-social .icono-boton i {
-    font-size: 1.75rem;
-    transition: font-size 200ms ease-out;
-}
-.botones-socieales .boton-social:hover .icono-boton i {
-    font-size: 2.5rem;
-}
-.botones-socieales li:nth-child(1) .icono-boton {
-    background-color: #4141FF;
-}
-.botones-socieales li:nth-child(1) .texto-oculto {
-    background-color: #8282EF;
-    border-right-color: #4141FF;
-}
-.botones-socieales li:nth-child(2) .icono-boton {
-    background-color: #3DCFDC;
-}
-.botones-socieales li:nth-child(2) .texto-oculto {
-    background-color: #98DEE4;
-    border-right-color: #3DCFDC;
-}
-.botones-socieales li:nth-child(3) .icono-boton {
-    background: linear-gradient(#B328F3, #2E87FF);
-}
-.botones-socieales li:nth-child(3) .texto-oculto {
-    background-color: #CD5EFF;
-    border-right-color: #B328F3;
-}
-.botones-socieales li:nth-child(4) .icono-boton {
-    background: #FF3434;
-}
-.botones-socieales li:nth-child(4) .texto-oculto {
-    background-color: #FF9595;
-    border-right-color: #FF3434;
+.navbar .nav-link,
+.navbar .navbar-brand {
+color: white !important;
 }
 
-@media (max-width: 750px){
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+color: lightgray !important;
+}
 
- }
+
+.card{
+  background-color: mediumpurple;
+  border-radius: 1.75rem;
+  padding: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card .card-header{
+  flex-basis: 100%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.card .card-body{
+  flex-basis: 100%;
+  margin-top: 1.2rem;
+
+}
+.card .card-body p{
+  margin: 0;
+
+}
+
+.card .card-body a{
+  text-decoration: none;
+  color: #fafbff;
+  display: inline-block;
+  padding: 0.7rem 1.75rem;
+  border: 1px solid transparent;
+  background-color: #0e171f;
+  border-radius: 1.75rem;
+  margin-top: 1.2rem;
+  transition: background-color 0.4s ease-in,color 0,4s ease-in;
+}
+
+.card .card-body a:haver{
+  background-color: transparent;
+  border-color: #0e171f;
+  color: #0e171f;
+}
+
+.card .card-footer{
+  flex-basis: 100%;
+  align-self:flex-end;
+  text-align: end;
+  font-size:0.8rem;
+
+}
+
+.container{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.card-selection{
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fill),minmax(200px,1fr);
+}
+
+.card-title{
+    font-size: 25px;
+}
