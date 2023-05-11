@@ -219,13 +219,6 @@ margin-bottom: 10px;
         width: 100%
     }
 }
-
-.navbar-with-image {
-    background-image: url('imagenes/fondo2.jpg');
-    background-size: cover;
-    background-position: center;
-
-}
 .navbar-nav .nav-link {
     color: #000000;
   }
