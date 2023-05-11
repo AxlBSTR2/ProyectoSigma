@@ -1,5 +1,5 @@
 const pass = document.getElementById("password")
-const email = document.getElementById("email")
+ const email = document.getElementById("email")
 const form = document.getElementById("form")
 const parrafo = document.getElementById("warnings")
 
