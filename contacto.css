@@ -145,3 +145,6 @@ color: white !important;
 .navbar .nav-link:hover {
 color: lightgray !important;
 }
+.error{
+color: red;
+}
