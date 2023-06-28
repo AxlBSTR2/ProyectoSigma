@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 body{
-    background-image: url(imagenes/fondo\ 4.jpg); 
+    background-image: url(/img/falk/fondo\ 4.jpg); 
 }
 *{
     margin: 0;
@@ -222,7 +222,7 @@ margin-bottom: 10px;
 }
 
 .navbar-with-image {
-    background-image: url('imagenes/fondo\ 4.jpg');
+    background-image: url(/img/falk/fondo\ 4.jpg);
     background-size: cover;
     background-position: center;
 

@@ -1,5 +1,5 @@
 body {
-    background-image: url('imagenes/fondo.jpg');
+    background-image: url(/img/falk/fondo.jpg);
     background-size: cover;
     background-position: center;
     line-height: 1.6;
@@ -36,7 +36,7 @@ ul {
 }
 
 .contact-form {
-    background-image: url(imagenes/fondo\ 4.jpg);
+    background-image: url(/img/falk/fondo\ 4.jpg);
     background-size: cover;
     background-position: center;
     line-height: 1.6;
@@ -78,7 +78,7 @@ ul {
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-    background-image: url(imagenes/fondo3.jpg);
+    background-image: url(/img/falk/fondo3.jpg);
     transition: background-color 1s ease-out;
     outline: 0;
 }
