@@ -1,0 +1,230 @@
+
+body{
+  background: url("../appSigma/img/falk/fondo4.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  }
+  .carousel-item img {
+      max-width: 80%;
+      height: auto;
+      
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 56vh;
+    
+    }
+    h1, label, input, textarea, button {
+      color:#fafbff;
+  }
+
+  .navbar-collapse {
+    animation-duration: 0.5s;
+    animation-name: slideIn;
+    transform-origin: top;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: scaleY(0);
+    }
+  
+    to {
+      transform: scaleY(1);
+    }
+  }
+
+  .carousel-item {
+    transition: none;
+}
+
+.navbar {
+  background-color: transparent !important;
+  
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+color: white !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+color: whitesmoke !important;
+}
+
+
+.card {
+width: 500px;
+height: 300px;
+background-color: white !important;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+position: relative;
+transform: scale(1);
+transition: transform 0.3s ease-in-out;
+}
+
+.card-button {
+display: inline-block;
+padding: 20px 20px;
+background-color: indigo;
+color: white;
+border: none;
+border-radius: 5px;
+text-decoration: none;
+font-weight: bold;
+transition: background-color 0.3s ease-in-out;
+position: absolute;
+bottom: 20px;
+left:85%;
+transform: translateX(-50%);
+}
+.card-button:hover {
+background-color: mediumpurple;
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+
+.card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.card-content {
+padding: 20px;
+
+}
+
+.card-title {
+font-size: 22px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+/*-- acerca de--*/
+
+.about-wthree {
+padding: 5em 0 22.6em 0px;
+background-color: darkorchid(63, 63, 63);
+}
+
+.ab-w3l-spa {
+text-align: center;
+position: relative;
+color: white;
+}
+
+.w3l-slider-img {
+border: 10px solid transparent(255, 255, 255, 0.4);
+position: absolute;
+left: 2em;
+top: 29em;
+}
+
+.w3ls-info-about {
+position: absolute;
+left: 46%;
+z-index: 99;
+padding: 2em 4.5em;
+top: 107%;
+border: 10px solid mediumorchid;
+}
+
+.w3ls-info-about h4 {
+font-size: 1.5em;
+letter-spacing: 1px;
+color: #ffffff;
+/* margin-bottom: 11px; */
+line-height: 1.4em;
+text-transform: capitalize;
+background:transparent;
+padding: 10px 15px;
+}
+
+.w3ls-info-about p {
+/* margin: 0em 0 2em 0; */
+color: #ffffff;
+line-height: 2.2em;
+background: (1, 0, 0, 0.85);
+font-size: 0.9em;
+letter-spacing: 2px;
+}
+
+p.about-para-w3ls {
+color: #fafbff;
+font-size: 16px;
+line-height: 33px;
+letter-spacing: 0.5px;
+margin-bottom: 2em;
+}
+/*-- acerca de--*/
+
+/*--servicios--*/
+
+.advantages {
+background: transparent;
+min-height: 350px;
+background-size: cover;
+color: white;
+}
+
+.advantage-block {
+padding: 2em 2em;
+background: rgba(0, 0, 0, 0.52);
+text-align: center;
+}
+
+.advantage-block:hover {
+background: rgba(255, 255, 255, 0.22);
+transition: 0.5s all;
+-webkit-transition: 0.5s all;
+-moz-transition: 0.5s all;
+-o-transition: 0.5s all;
+}
+
+.advantage-block h4 {
+font-size: 1.5em;
+color: #fff;
+margin: 0.5em 0em 0.5em 0em;
+text-transform: capitalize;
+letter-spacing: 1px;
+}
+
+.advantage-block p {
+font-size: 16px;
+color: #FFF;
+/* line-height: 1.8em; */
+text-align: left;
+padding-left: 3em;
+line-height: 35px;
+letter-spacing: .8px;
+}
+
+.advantage-grid {
+padding: 0;
+}
+
+.left-w3ls {
+border-right: 1px solid #b1b1b1;
+}
+
+.advantage-block .fa-credit-card,
+.advantage-block .fa-clock-o {
+color: #ffce14;
+font-size: 45px;
+margin-bottom: 10px;
+}
+
+.advantage-block p i {
+color: #ffce14;
+font-size: 13px;
+margin-right: 10px;
+}
+/*--servicios--*/

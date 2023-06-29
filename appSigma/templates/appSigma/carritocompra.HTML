@@ -1,0 +1,479 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/carritocompra.css'%}">
+    <script src="{% static 'js/carritocompra.js'%}" async></script>
+    <title>SigmaShop Compras</title>
+</head>
+
+<body>
+  <!--NARVAR-->
+  <nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container-fluid">
+      <img src="{% static 'appSigma/img/falk/sigmashopLOGO.png' %}" href="{% url 'index' %}" alt="Bootstrap" width="80" height="80">
+      <a class="navbar-brand" href="{% url 'index' %}">SigmaShop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'carritocompra' %}">Comprar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'seguimiento' %}">Seguimiento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contacto' %}">Contactanos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Conectate a SigmaShop
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'logearse' %}">Inicia Sesion!</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'registrarse' %}">Registrate!</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'perfilusuario' %}">Mi cuenta</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+</nav>
+    <!--NARVAR-->
+      
+    <section class="contenedor">
+        <!-- Items de compra -->
+        <div class="contenedor-items">
+        <!-- Tarjetas Graficas -->
+            <div class="item">
+                <span class="titulo-item">GTX 1070</span>
+                <img src="{% static 'appSigma/img/graficas/1070.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: Asus</span>
+                <span class="desc-item">Memoria Vram: 8GB GDDR5</span>
+                <span class="desc-item">Bus: Pci Express 3.0</span>
+                <span class="precio-item">$169.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">RTX 3050</span>
+                <img src="{% static 'appSigma/img/graficas/3050.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: Galax</span>
+                <span class="desc-item">Memoria Vram: 8GB GDDR6</span>
+                <span class="desc-item">Bus: Pci Express 4.0x8</span>
+                <span class="precio-item">$299.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">RX 6400</span>
+                <img src="{% static 'appSigma/img/graficas/6400.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: AsRock</span>
+                <span class="desc-item">Memoria Vram: 4GB GDDR6</span>
+                <span class="desc-item">Bus: Pci Express 4.0x4</span>
+                <span class="precio-item">$179.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">RX 6800XT</span>
+                <img src="{% static 'appSigma/img/graficas/6800xt.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: AsRock</span>
+                <span class="desc-item">Memoria Vram: 16GB GDDR6</span>
+                <span class="desc-item">Bus: Pci Express 4.0x16</span>
+                <span class="precio-item">$679.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">GTX 1650</span>
+                <img src="{% static 'appSigma/img/graficas/1650.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: Asus</span>
+                <span class="desc-item">Memoria Vram: 4GB GDDR6</span>
+                <span class="desc-item">Bus: Pci Express 3.0x16</span>
+                <span class="precio-item">$149.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">RX 580 v2</span>
+                <img src="{% static 'appSigma/img/graficas/580v2.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: XFX</span>
+                <span class="desc-item">Memoria Vram: 8GB GDDR5</span>
+                <span class="desc-item">Bus: Pci Express 3.0x16</span>
+                <span class="precio-item">$109.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">GTX 1660 SUPER</span>
+                <img src="{% static 'appSigma/img/graficas/1660s.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: MSI</span>
+                <span class="desc-item">Memoria Vram: 6GB GDDR6</span>
+                <span class="desc-item">Bus: Pci Express 3.0x16</span>
+                <span class="precio-item">$249.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">RTX 3060</span>
+                <img src="{% static 'appSigma/img/graficas/3060.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: MSI</span>
+                <span class="desc-item">Memoria Vram: 12GB GDDR6</span>
+                <span class="desc-item">Bus: Pci Express 4.0x16</span>
+                <span class="precio-item">$329.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">RTX 2060</span>
+                <img src="{% static 'appSigma/img/graficas/2060.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: EVGA</span>
+                <span class="desc-item">Memoria Vram: 6GB GDDR6</span>
+                <span class="desc-item">Bus: Pci Express 3.0x16</span>
+                <span class="precio-item">$299.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">RX 550</span>
+                <img src="{% static 'appSigma/img/graficas/550.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: AsRock</span>
+                <span class="desc-item">Memoria Vram: 2GB GDDR6</span>
+                <span class="desc-item">Bus: Pci Express 3.0x16</span>
+                <span class="precio-item">$89.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <!-- Procesadores -->
+            <div class="item">
+                <span class="titulo-item">AMD Athlon 3000G</span>
+                <img src="{% static 'appSigma/img/proces/Athlon 3000G.png'%}" alt="" class="img-item">
+                <span class="desc-item">Frecuencia: 3500 MHz</span>
+                <span class="desc-item">Núcleo/Hilo: 2 núcleos/4 hilos</span>
+                <span class="desc-item">TPD: 35W</span>
+                <span class="precio-item">$88.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">AMD Ryzen 3 3200G</span>
+                <img src="{% static 'appSigma/img/proces/Ryzen 3 3200G.png'%}" alt="" class="img-item">
+                <span class="desc-item">Frecuencia: 3600 MHz</span>
+                <span class="desc-item">Núcleo/Hilo: 4 núcleos/4 hilos</span>
+                <span class="desc-item">TPD: 65W</span>
+                <span class="precio-item">$90.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">AMD Ryzen 5 5600G</span>
+                <img src="{% static 'appSigma/img/proces/Ryzen 3 3200G.png'%}" alt="" class="img-item">
+                <span class="desc-item">Frecuencia: 3900 MHz</span>
+                <span class="desc-item">Núcleo/Hilo: 6 núcleos/12 hilos</span>
+                <span class="desc-item">TPD: 65W</span>
+                <span class="precio-item">$124.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">AMD Ryzen 7 5700X</span>
+                <img src="{% static 'appSigma/img/proces/Ryzen 7 5700X.png'%}" alt="" class="img-item">
+                <span class="desc-item">Frecuencia: 3400 MHz</span>
+                <span class="desc-item">Núcleo/Hilo: 8 núcleos/16 hilos</span>
+                <span class="desc-item">TPD: 65W</span>
+                <span class="precio-item">$199.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">AMD Ryzen 7 5800X3D</span>
+                <img src="{% static 'appSigma/img/proces/Ryzen 7 5800X3D.png'%}" alt="" class="img-item">
+                <span class="desc-item">Frecuencia: 3400 MHz</span>
+                <span class="desc-item">Núcleo/Hilo: 8 núcleos/16 hilos</span>
+                <span class="desc-item">TPD: 105W</span>
+                <span class="precio-item">$344.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Intel Core i3 10100F</span>
+                <img src="{% static 'appSigma/img/proces/Core i3-10100F.png'%}" alt="" class="img-item">
+                <span class="desc-item">Frecuencia: 3600 MHz</span>
+                <span class="desc-item">Núcleo/Hilo: 4 núcleos/8 hilos</span>
+                <span class="desc-item">TPD: 65W</span>
+                <span class="precio-item">$69.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Intel Core i3 12100F</span>
+                <img src="{% static 'appSigma/img/proces/Core i3-12100F.png'%}" alt="" class="img-item">
+                <span class="desc-item">Frecuencia: 3400 MHz</span>
+                <span class="desc-item">Núcleo/Hilo: 4 núcleos/16 hilos</span>
+                <span class="desc-item">TPD: 65W</span>
+                <span class="precio-item">$104.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Intel Core i5-12400F</span>
+                <img src="{% static 'appSigma/img/proces/Core i5-12400F.png'%}" alt="" class="img-item">
+                <span class="desc-item">Frecuencia: 2500/4400(max) MHz</span>
+                <span class="desc-item">Núcleo/Hilo: 6 núcleos/12 hilos</span>
+                <span class="desc-item">TPD: 65W</span>
+                <span class="precio-item">$159.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Intel Core i7-13700KF</span>
+                <img src="{% static 'appSigma/img/proces/Core i7-13700KF.png'%}" alt="" class="img-item">
+                <span class="desc-item">Frecuencia: 3400/5400(max) MHz</span>
+                <span class="desc-item">Núcleo/Hilo: 8 P-core, 8 E-core/24 hilos</span>
+                <span class="desc-item">TPD: 125W</span>
+                <span class="precio-item">$399.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Intel core i9-13900KF</span>
+                <img src="{% static 'appSigma/img/proces/Core i9-13900KF.png'%}" alt="" class="img-item">
+                <span class="desc-item">Frecuencia: 3000/5800(max) MHz</span>
+                <span class="desc-item">Núcleo/Hilo: 8 P-core, 16 E-core/32 hilos</span>
+                <span class="desc-item">TPD: 125W</span>
+                <span class="precio-item">$615.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <!-- Memorias Rams -->
+            <div class="item">
+                <span class="titulo-item">Ram Notebook Crucial</span>
+                <img src="{% static 'appSigma/img/ram/note ddr4 8gb.jpg'%}" alt="" class="img-item">
+                <span class="desc-item">Capacidad: 1x8GB</span>
+                <span class="desc-item">Tipo: DDR4</span>
+                <span class="desc-item">Frecuencia: 3200 MHz</span>
+                <span class="precio-item">$10.000</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ram Notebook Kingston</span>
+                <img src="{% static 'appSigma/img/ram/note ddr4 16gb.jpg'%}" alt="" class="img-item">
+                <span class="desc-item">Capacidad: 1x16GB</span>
+                <span class="desc-item">Tipo: DDR4</span>
+                <span class="desc-item">Frecuencia: 3200 MHz</span>
+                <span class="precio-item">$29.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ram Notebook Crucial</span>
+                <img src="{% static 'appSigma/img/ram/note ddr5 8gb.jpg'%}" alt="" class="img-item">
+                <span class="desc-item">Capacidad: 1x8GB</span>
+                <span class="desc-item">Tipo: DDR5</span>
+                <span class="desc-item">Frecuencia: 4800 MHz</span>
+                <span class="precio-item">$29.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ram Notebook Crucial</span>
+                <img src="{% static 'appSigma/img/ram/note ddr5 16gb.jpg'%}" alt="" class="img-item">
+                <span class="desc-item">Capacidad: 1x16GB</span>
+                <span class="desc-item">Tipo: DDR5</span>
+                <span class="desc-item">Frecuencia: 4800 MHz</span>
+                <span class="precio-item">$44.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ram PC Hikvision U1</span>
+                <img src="{% static 'appSigma/img/ram/pc ddr3 8gb.jpeg'%}" alt="" class="img-item">
+                <span class="desc-item">Capacidad: 1x8GB</span>
+                <span class="desc-item">Tipo: DDR3</span>
+                <span class="desc-item">Frecuencia: 1600 MHz</span>
+                <span class="precio-item">$11.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ram PC Trident Z</span>
+                <img src="{% static 'appSigma/img/ram/pc ddr4 2x8gb.png'%}" alt="" class="img-item">
+                <span class="desc-item">Capacidad: 2x8GB</span>
+                <span class="desc-item">Tipo: DDR4</span>
+                <span class="desc-item">Frecuencia: 3600 MHz</span>
+                <span class="precio-item">$74.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ram PC Kingston</span>
+                <img src="{% static 'appSigma/img/ram/pc ddr4 8gb white.jpg'%}" alt="" class="img-item">
+                <span class="desc-item">Capacidad: 1x8GB</span>
+                <span class="desc-item">Tipo: DDR4</span>
+                <span class="desc-item">Frecuencia: 3200 MHz</span>
+                <span class="precio-item">$24.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ram PC Kingston</span>
+                <img src="{% static 'appSigma/img/ram/pc ddr4 8gb.jpg'%}" alt="" class="img-item">
+                <span class="desc-item">Capacidad: 1x8GB</span>
+                <span class="desc-item">Tipo: DDR4</span>
+                <span class="desc-item">Frecuencia: 3200 MHz</span>
+                <span class="precio-item">$22.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ram PC Team T-Force</span>
+                <img src="{% static 'appSigma/img/ram/pc ddr5 2x16gb.jpg'%}" alt="" class="img-item">
+                <span class="desc-item">Capacidad: 2x16GB</span>
+                <span class="desc-item">Tipo: DDR5</span>
+                <span class="desc-item">Frecuencia: 6000 MHz</span>
+                <span class="precio-item">$174.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ram PC Kingston</span>
+                <img src="{% static 'appSigma/img/ram/pc ddr5 16gb.jpg'%}" alt="" class="img-item">
+                <span class="desc-item">Capacidad: 1x16GB</span>
+                <span class="desc-item">Tipo: DDR5</span>
+                <span class="desc-item">Frecuencia: 5200 MHz</span>
+                <span class="precio-item">$53.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <!-- Tarjetas Madres -->
+            <div class="item">
+                <span class="titulo-item">A520M-A II Micro</span>
+                <img src="{% static 'appSigma/img/motherboard/Asus PRIME A520M-A II.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: ASUS</span>
+                <span class="desc-item">Socket: AM4</span>
+                <span class="desc-item">Slots Ram: 4x DDR4</span>
+                <span class="precio-item">$69.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Z690M Phanom Gaming 4</span>
+                <img src="{% static 'appSigma/img/motherboard/AsRock Z690M Phntom Gaming 4.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: AsRock</span>
+                <span class="desc-item">Socket: LGA1700</span>
+                <span class="desc-item">Slots Ram: 4x DDR4</span>
+                <span class="precio-item">$134.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">PRO B650M-A WIFI</span>
+                <img src="{% static 'appSigma/img/motherboard/MSI PRO B650M-A WIFI.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: MSI</span>
+                <span class="desc-item">Socket: AM5</span>
+                <span class="desc-item">Slots Ram: 4x DDR5</span>
+                <span class="precio-item">$189.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Z690M PG Lightning</span>
+                <img src="{% static 'appSigma/img/motherboard/ASRock Z790 PG Lightning.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: AsRock</span>
+                <span class="desc-item">Socket: LGA1700</span>
+                <span class="desc-item">Slots Ram: 4x DDR5</span>
+                <span class="precio-item">$219.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">PRIME H510M-E</span>
+                <img src="{% static 'appSigma/img/motherboard/ASUS PRIME H510M-E.jpg'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: ASUS</span>
+                <span class="desc-item">Socket: LGA1200</span>
+                <span class="desc-item">Slots Ram: 2x DDR4</span>
+                <span class="precio-item">$64.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">A320M-A PRO</span>
+                <img src="{% static 'appSigma/img/motherboard/MSI A320M-A PRO.jpg'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: ASUS</span>
+                <span class="desc-item">Socket: LGA1200</span>
+                <span class="desc-item">Slots Ram: 2x DDR4</span>
+                <span class="precio-item">$64.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">H310M M.2 2.0</span>
+                <img src="{% static 'appSigma/img/motherboard/Gigabyte H310M M.2 2.0.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: Gigabyte</span>
+                <span class="desc-item">Socket: LGA1151</span>
+                <span class="desc-item">Slots Ram: 2x DDR4</span>
+                <span class="precio-item">$59.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">MPG B550 GAMING PLUS</span>
+                <img src="{% static 'appSigma/img/motherboard/msi mpg b550 gaming plus.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: MSI</span>
+                <span class="desc-item">Socket: AM4</span>
+                <span class="desc-item">Slots Ram: 4x DDR4</span>
+                <span class="precio-item">$174.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">B660M STEEL LEGEND</span>
+                <img src="{% static 'appSigma/img/motherboard/ASROCK B600M STEEL LEGEND.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: AsRock</span>
+                <span class="desc-item">Socket: LGA1700</span>
+                <span class="desc-item">Slots Ram: 4x DDR4</span>
+                <span class="precio-item">$119.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Z590 AORUS ELITE</span>
+                <img src="{% static 'appSigma/img/motherboard/Gigabyte z590 AOURS ELITE AX.png'%}" alt="" class="img-item">
+                <span class="desc-item">Fabricante: Gigabyte</span>
+                <span class="desc-item">Socket: LGA1200</span>
+                <span class="desc-item">Slots Ram: 4x DDR4</span>
+                <span class="precio-item">$139.990</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!--
+                <div class="carrito-item">
+                    <img src="img/ram/pc ddr4 8gb white.jpg" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Ram PC Kingston</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="2" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">24.990</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/graficas/6800xt.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">RX 6800XT</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$679.990</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $729.970
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+        </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>
