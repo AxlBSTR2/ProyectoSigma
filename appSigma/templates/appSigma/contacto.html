@@ -84,7 +84,7 @@
                 <br>
                 <p id="resultado"></p>
 
-                <script src="{% static 'js/code.jquery.com_jquery-3.7.0.min.js'%}"></script>
+                <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
 
                 <script>
                   $(document).ready(() => {
@@ -92,13 +92,12 @@
                       $('#frmDatos').submit(function(evento) {
                           let msj = $('#msj').val().trim();
 
-                          if(msj.length < 15){
+                          if(msj.length < 30){
                               $('.error').show();
                               return;
                           }
                           $('.error').hide();
                           alert("solicitud enviada correctamente");
-                          $('#resultado').text(`Solicitud enviada correctamente`);
                       });
                   });
                 </script>

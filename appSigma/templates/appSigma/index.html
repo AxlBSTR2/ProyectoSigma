@@ -35,16 +35,31 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'contacto' %}">Contactanos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'perfilusuario' %}">                  
+            {% if user.is_authenticated %}
+              {{ user.username }}
+            {% else %}
+              Perfil
+            {% endif %}
+          </a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Conectate a SigmaShop
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{% url 'logearse' %}">Inicia Sesion!</a></li>
+              <li>
+                <a class="dropdown-item" href="{% url 'logearse' %}">Iniciar Sesion!</a>
+              </li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="{% url 'registrarse' %}">Registrate!</a></li>
+              <li>
+                <a class="dropdown-item" href="{% url 'registrarse' %}">Registrarse!</a>
+              </li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="{% url 'perfilusuario' %}">Mi cuenta</a></li>
+              <li>
+                <a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesion!</a>
+              </li>
             </ul>
           </li>
         </ul>
