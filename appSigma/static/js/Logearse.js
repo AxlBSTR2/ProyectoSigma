@@ -20,7 +20,11 @@ form.addEventListener("submit", e=>{
     if(entrar == true){
         parrafo.innerHTML = warnings
     }else{
-        window.location.href = "{% url 'index' %}";
-        parrafo.innerHTML = "Enviado"
-    }
+         window.location.href = "{% url 'index' %}";
+         parrafo.innerHTML = "Enviado"
+     }
 })
+
+function redireccionarRutaAnterior() {
+    window.history.back();  // Redirecciona a la ruta anterior en el historial del navegador
+  }

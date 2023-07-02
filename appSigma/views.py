@@ -1,8 +1,50 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Producto
 from .forms import ProductoForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
 
 # Create your views here.
+def logout_user(request):
+    logout(request)
+    return redirect('index')
+
+def login_user(request):
+    if request.method == "POST":
+        username = request.POST['logUsuario']
+        password = request.POST['password']
+        User = authenticate(request, username = username, password = password)
+        if User is not None:
+            login(request, User)
+            return redirect('index')
+        else:
+            messages.error(request, "Has tenido un error al iniciar sesión")
+            return HttpResponseRedirect('.')
+    else:
+        return render(request, 'appSigma/logearse.html') 
+
+def registrarse(request):
+    return render(request, 'Mangas/registrarse.html')
+
+def registro_view(request):
+    if request.method != "POST":
+        return render(request, 'appSigma/registrarse.html')
+    else:
+        username = request.POST.get('regNombre')
+        email = request.POST.get('regEmail')
+        password = request.POST.get('regContrasena')
+
+        # Crea un nuevo objeto de usuario y establece los valores
+        user = User.objects.create_user(username=username, email=email, password=password)
+        user.first_name = username
+        user.save()
+
+        messages.success(request, "Cuenta creada exitosamente")
+
+        return redirect('logearse')
+
 def index(request):
     return render(request,'appSigma/index.html')
 
@@ -14,17 +56,8 @@ def carritocompra(request):
     data = {"productos": productos}
     return render(request, 'appSigma/carritocompra.html', data)
 
-def logearse(request):
-    return render(request, 'appSigma/logearse.html')
-
 def perfilusuario(request):
     return render(request, 'appSigma/perfilusuario.html')
-
-def registrarse(request):
-    return render(request, 'appSigma/registrarse.html')
-
-def seguimiento(request):
-    return render(request, 'appSigma/seguimiento.html')
 
 def agregar_producto(request):
     data = {'form': ProductoForm()}

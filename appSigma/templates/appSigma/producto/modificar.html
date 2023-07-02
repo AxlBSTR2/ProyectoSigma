@@ -1,6 +1,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% load crispy_forms_filters %}
+{% load humanize %}  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +10,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificar</title>
+    <link rel="stylesheet" href="{% static 'css/admin.css'%}">
+
 </head>
 <body>
-    <!--NARVAR-->
+  <!--NARVAR-->
   <nav class="navbar navbar-expand-lg bg-transparent">
     <div class="container-fluid">
       <img src="{% static 'appSigma/img/falk/sigmashopLOGO.png' %}" href="{% url 'index' %}" alt="Bootstrap" width="80" height="80">
@@ -28,21 +31,40 @@
             <a class="nav-link" href="{% url 'carritocompra' %}">Comprar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'seguimiento' %}">Seguimiento</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="{% url 'contacto' %}">Contactanos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'perfilusuario' %}">                  
+            {% if user.is_authenticated %}
+              {{ user.username }}
+            {% else %}
+              Perfil
+            {% endif %}
+          </a>
+          </li>
+          {% if user.is_authenticated %} 
+          {% if user.is_staff%}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'listar-producto' %}">Listar Producto</a>
+          </li>
+          {% endif %}
+          {% endif %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Conectate a SigmaShop
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{% url 'logearse' %}">Inicia Sesion!</a></li>
+              <li>
+                <a class="dropdown-item" href="{% url 'logearse' %}">Iniciar Sesion!</a>
+              </li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="{% url 'registrarse' %}">Registrate!</a></li>
+              <li>
+                <a class="dropdown-item" href="{% url 'registrarse' %}">Registrarse!</a>
+              </li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="{% url 'perfilusuario' %}">Mi cuenta</a></li>
+              <li>
+                <a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesion!</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -51,6 +73,7 @@
     </div>
     <!--NARVAR-->
   </nav>
+
 <section class="container">
     <h2 class="row d-flex justify-content-center col-12 cold-md-6" >Agregar Productos</h2>
   <div class="row d-flex justify-content-center">
@@ -62,19 +85,18 @@
 
                         {% csrf_token %}
                         {{ form | crispy}}
-
-                        <div class="d-flex justify-content-evenly">
+                            
+                          <div class="d-flex justify-content-evenly">
                             <input type="submit" value="Guardar" class="btn btn-primary">
                             <input type="submit" value="Cancelar" class="btn btn-secondary">
                         </div>
 
                     </form>
-
-
             </div>
         </div>
     </div>
   </div>
+
 </section>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
