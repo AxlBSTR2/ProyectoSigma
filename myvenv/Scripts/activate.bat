@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Axel Python\Desktop\ProyectoSigma-axl\ProyectoSigma-axl\myvenv
+set VIRTUAL_ENV=C:\Users\Axel Python\Desktop\ProyectoSigma-main\ProyectoSigma-main\myvenv
 
 if not defined PROMPT set PROMPT=$P$G
 
