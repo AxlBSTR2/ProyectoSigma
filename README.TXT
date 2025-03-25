@@ -10,4 +10,3 @@ pip install -r requirements.txt
 python manage.py runserver
 
 CRTL + CLICK en el URL que nos da CMD.
-asdasdaasdasdasdasd
