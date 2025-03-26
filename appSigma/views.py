@@ -92,3 +92,31 @@ def eliminar_producto(request, id):
     producto = get_object_or_404(Producto, id=id)
     producto.delete()
     return redirect(to="listar-producto")
+
+from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
+
+@login_required
+def eliminar_cuenta(request):
+    if request.method == "POST":
+        user = request.user
+        logout(request)  # Cerrar sesión antes de eliminar
+        user.delete()
+        return redirect("home")  # Cambia "home" por la vista de inicio o login
+
+    return redirect("perfil")  # Si alguien entra por GET, redirigir al perfil
+
+from django.contrib.auth.models import User
+from django.shortcuts import redirect
+from django.contrib import messages
+
+def eliminar_cuenta(request):
+    if request.user.is_authenticated:
+        user = request.user
+        user.delete()  # Elimina al usuario de la base de datos
+        messages.success(request, "Tu cuenta ha sido eliminada con éxito.")
+        return redirect('index')  # Redirige al inicio o a cualquier otra página
+    else:
+        messages.error(request, "No estás autenticado.")
+        return redirect('index')  # O redirige a la página que quieras

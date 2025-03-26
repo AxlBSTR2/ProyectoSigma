@@ -246,3 +246,39 @@ body {
 
       }
 }
+/* Estilo para el botón de eliminación de cuenta */
+.eliminar-cuenta-container form button {
+    padding: 12px 20px !important; /* Ajusta el tamaño del botón */
+    font-size: 1rem !important; /* Tamaño del texto */
+    border-radius: 8px !important; /* Bordes redondeados */
+    background-color: #dc3545 !important; /* Color rojo para el botón */
+    color: white !important; /* Color del texto blanco */
+    border: none !important; /* Sin borde */
+    cursor: pointer !important; /* Estilo de cursor de puntero */
+    display: inline-block !important; /* Evita que se extienda a todo el contenedor */
+    text-align: center !important; /* Asegura que el texto esté centrado */
+}
+
+/* Estilo para cuando el botón es hover (cuando se pasa el ratón) */
+.eliminar-cuenta-container form button:hover {
+    background-color: #c82333 !important; /* Rojo más oscuro al pasar el mouse */
+}
+
+
+.eliminar-cuenta-container button {
+    padding: 12px 20px;  /* Ajusta el tamaño del botón */
+    font-size: 1rem;     /* Tamaño del texto */
+    border-radius: 8px;  /* Bordes redondeados */
+    background-color: #dc3545; /* Rojo, color para eliminar */
+    color: white;        /* Texto blanco */
+    border: none;        /* Sin borde */
+    cursor: pointer;     /* Puntero al pasar sobre el botón */
+}
+
+.eliminar-cuenta-container button:hover {
+    background-color: #c82333; /* Color cuando el mouse pasa por encima */
+}
+.eliminar-cuenta-container form button {
+    background-color: #dc3545 !important;
+    color: white !important;
+}

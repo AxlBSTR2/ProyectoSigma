@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+from .views import eliminar_cuenta
 urlpatterns = [
     path('', views.index,name='index'),
     
@@ -22,6 +22,8 @@ urlpatterns = [
 
     path('eliminar-producto/<id>', views.eliminar_producto, name='eliminar-producto'),
 
-    path('logout/', views.logout_user, name='logout')
+    path('logout/', views.logout_user, name='logout'),
+
+    path("eliminar-cuenta/", views.eliminar_cuenta, name="eliminar_cuenta")
 
 ]
