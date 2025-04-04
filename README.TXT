@@ -10,3 +10,12 @@ pip install -r requirements.txt
 python manage.py runserver
 
 CRTL + CLICK en el URL que nos da CMD.
+
+===============
+Consola interactiva de django
+(en cmd)
+python manage.py shell
+
+admin bd
+user: admin
+pass: adminpass123
