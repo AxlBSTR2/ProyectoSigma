@@ -82,48 +82,22 @@
         <div class="contact-wrapper animated bounceInUp">
             <div class="contact-form">
                 <h3>Contactanos</h3>
-                <form action="" id="frmDatos">
-                    <p> 
-                        <label>Nombre completo</label>
-                        <input type="text" name="fullname">
-                    </p>
-                    <p>
-                        <label>Email </label>
-                        <input type="email" name="email">
-                    </p>
-                    <p>
-                        <label>Numero telefonico</label>
-                        <input type="tel" name="phone">
-                    </p>
-                   
-                    <p class="block">
-                       <label for="msj">Mensaje</label> 
-                       <input type="text" id="msj">
-                       <span class="error">El campo Mensaje es obligatorio.</span>
-                       <br>
-                       <input  type="submit" value="Enviar"> 
-                    </p>
-                </form>
+                <form method="POST" id="frmDatos">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <p class="block">
+                      <input type="submit" value="Enviar">
+                  </p>
+              </form>
+              
+              {% if enviado %}
+                  <p style="color: lightgreen;">¡Tu mensaje fue enviado exitosamente!</p>
+              {% endif %}
                 <br>
                 <p id="resultado"></p>
 
                 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
-                <script>
-                  $(document).ready(() => {
-                      $('.error').hide();
-                      $('#frmDatos').submit(function(evento) {
-                          let msj = $('#msj').val().trim();
-
-                          if(msj.length < 30){
-                              $('.error').show();
-                              return;
-                          }
-                          $('.error').hide();
-                          alert("solicitud enviada correctamente");
-                      });
-                  });
-                </script>
             </div>
             <div class="Mas informacion">
                 <h4>More Info</h4>

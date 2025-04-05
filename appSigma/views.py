@@ -120,3 +120,24 @@ def eliminar_cuenta(request):
     else:
         messages.error(request, "No estás autenticado.")
         return redirect('index')  # O redirige a la página que quieras
+
+# appSigma/views.py
+
+from django.shortcuts import render, redirect
+from .forms import ContactoForm
+
+def contacto(request):
+    if request.method == 'POST':
+        form = ContactoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form = ContactoForm()  # Esto limpia el formulario
+            return render(request, 'appSigma/contacto.html', {
+                'mensaje': 'Enviado correctamente',
+                'form': form
+            })
+    else:
+        form = ContactoForm()
+
+    return render(request, 'appSigma/contacto.html', {'form': form})
+
