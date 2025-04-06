@@ -1,11 +1,11 @@
 body {
-    background-image: url('../appSigma/img/falk/fondo.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #000; /* Fondo negro */
+    color: white;
     line-height: 1.6;
     font-family: 'Quicksand', sans-serif;
     padding: 0 1.5em;
 }
+
 .container {
     max-width: 1170px;
     margin-left: auto;
@@ -24,11 +24,12 @@ ul {
 }
 
 .logo span {
-    color: #000;
+    color: #d630ff; /* Morado neón */
 }
 
 .contact-wrapper {
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+    background-color: #111; /* Fondo oscuro uniforme */
+    box-shadow: 0 0 20px 0 rgba(214, 48, 255, 0.3); /* Morado neón suave */
 }
 
 .contact-wrapper > * {
@@ -36,17 +37,14 @@ ul {
 }
 
 .contact-form {
-    background-image: url('../appSigma/img/falk/fondo4.jpg');
+    background-image: url('../appSigma/img/shit/fcontacto.png'); /* Mantener fondo aquí */
     background-size: cover;
     background-position: center;
-    line-height: 1.6;
-    font-family: 'Quicksand', sans-serif;
     padding: 0 1.5em;
 }
 
 .contact-form form {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 }
 
@@ -71,15 +69,14 @@ ul {
     border: none;
     background: none;
     outline: 0;
-    border-bottom: 1px solid #d63031;
+    border-bottom: 1px solid #d630ff; /* Borde morado neón */
+    color: white;
 }
-
-
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-    background-image: url('../appSigma/img/falk/fondo3.jpg');
-    transition: background-color 1s ease-out;
+    background-color: rgba(214, 48, 255, 0.1);
+    transition: background-color 0.3s ease-out;
     outline: 0;
 }
 
@@ -91,6 +88,7 @@ ul {
 .contact-info h4, .contact-info ul, .contact-info p {
     text-align: center;
     margin: 0 0 1rem 0;
+    color: #d630ff; /* Morado neón */
 }
 
 /* LARGE SIZE */
@@ -111,40 +109,39 @@ ul {
         text-align: left;
     }
 }
-body {
-    
-    color:white;
-}
+
 .Mas.informacion {
-    color: white;
-  }
-  h3, h4 {
-    color: white;
-  }
+    color: #d630ff;
+}
 
-  .content * {
-    color: white;
- }
+h3, h4 {
+    color: #d630ff;
+}
 
- .navbar-collapse {
+.content * {
+    color: white;
+}
+
+.navbar-collapse {
     animation-duration: 0.5s;
     animation-name: slideIn;
     transform-origin: top;
-  }
+}
 
 .navbar {
     background-color: transparent !important;
-    
 }
+
 .navbar .nav-link,
 .navbar .navbar-brand {
-color: white !important;
+    color: white !important;
 }
 
 .navbar .nav-link.active,
 .navbar .nav-link:hover {
-color: lightgray !important;
+    color: #d630ff !important;
 }
-.error{
-color: red;
+
+.error {
+    color: red;
 }

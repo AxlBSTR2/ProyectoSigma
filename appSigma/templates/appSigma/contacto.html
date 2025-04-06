@@ -83,16 +83,16 @@
             <div class="contact-form">
                 <h3>Contactanos</h3>
                 <form method="POST" id="frmDatos">
-                  {% csrf_token %}
-                  {{ form.as_p }}
-                  <p class="block">
-                      <input type="submit" value="Enviar">
-                  </p>
-              </form>
-              
-              {% if enviado %}
-                  <p style="color: lightgreen;">¡Tu mensaje fue enviado exitosamente!</p>
-              {% endif %}
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p class="block">
+        <input type="submit" value="Enviar">
+    </p>
+</form>
+
+{% if enviado %}
+    <p style="color: lightgreen;">¡Tu mensaje fue enviado exitosamente!</p>
+{% endif %}
                 <br>
                 <p id="resultado"></p>
 
